@@ -1,0 +1,27 @@
+# Normalize all text files to LF in repo; Git will convert to OS EOL on checkout only if core.autocrlf=input
+* text eol=lf
+
+# Common text file types (explicit examples not strictly needed due to '* text')
+*.js      text eol=lf
+*.mjs     text eol=lf
+*.ts      text eol=lf
+*.tsx     text eol=lf
+*.json    text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.md      text eol=lf
+*.css     text eol=lf
+*.scss    text eol=lf
+*.html    text eol=lf
+*.sh      text eol=lf
+
+# Keep binary files untouched
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.lock binary
+
+# Prevent diff noise on lockfiles if desired
+pnpm-lock.yaml -diff
